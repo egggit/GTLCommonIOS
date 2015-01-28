@@ -1,0 +1,24 @@
+PODS:
+  - GTLCommonIOS (0.0.1):
+    - GTLCommonIOS/Common
+  - GTLCommonIOS/Common (0.0.1):
+    - GTLCommonIOS/HTTPFetcher
+    - GTLCommonIOS/OAuth2
+    - GTLCommonIOS/Objects
+    - GTLCommonIOS/Utilities
+  - GTLCommonIOS/HTTPFetcher (0.0.1)
+  - GTLCommonIOS/OAuth2 (0.0.1)
+  - GTLCommonIOS/Objects (0.0.1)
+  - GTLCommonIOS/Utilities (0.0.1)
+
+DEPENDENCIES:
+  - GTLCommonIOS (from `../GTLCommonIOS.podspec`)
+
+EXTERNAL SOURCES:
+  GTLCommonIOS:
+    :path: ../GTLCommonIOS.podspec
+
+SPEC CHECKSUMS:
+  GTLCommonIOS: 60ec0c648a4adcb3797acfe1ce551d1c6a00fc1a
+
+COCOAPODS: 0.34.4
