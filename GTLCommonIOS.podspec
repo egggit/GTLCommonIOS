@@ -21,11 +21,18 @@ Pod::Spec.new do |s|
 #//////////////////////////////////////////////////
 
   s.subspec 'Common' do |sub|
-    sub.source_files  = 'Classes/*.{h,m}'
-    sub.dependency 'GTLCommonIOS/HTTPFetcher'        
     sub.dependency 'GTLCommonIOS/OAuth2'        
     sub.dependency 'GTLCommonIOS/Objects'        
-    sub.dependency 'GTLCommonIOS/Utilities'        
+  end
+
+#//////////////////////////////////////////////////
+#
+# Common Define
+#
+#//////////////////////////////////////////////////
+
+  s.subspec 'CommonDefine' do |sub|
+    sub.source_files  = 'Classes/*.{h,m}'
   end
 
 #//////////////////////////////////////////////////
@@ -36,7 +43,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'HTTPFetcher' do |sub|
     sub.source_files  = 'Classes/HTTPFetcher/*.{h,m}'
-  end
+    sub.dependency 'GTLCommonIOS/CommonDefine'        
+end
 
 #//////////////////////////////////////////////////
 #
@@ -47,6 +55,7 @@ Pod::Spec.new do |s|
   s.subspec 'OAuth2' do |sub|
     sub.source_files  = 'Classes/OAuth2/*.{h,m}',
                         'Classes/OAuth2/Touch/*.{h,m}'
+    sub.dependency 'GTLCommonIOS/HTTPFetcher'        
   end
 
 #//////////////////////////////////////////////////
@@ -57,6 +66,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'Objects' do |sub|
     sub.source_files  = 'Classes/Objects/*.{h,m}'
+    sub.dependency 'GTLCommonIOS/HTTPFetcher'  
+    sub.dependency 'GTLCommonIOS/Utilities'        
   end
 
 #//////////////////////////////////////////////////
@@ -67,6 +78,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Utilities' do |sub|
     sub.source_files  = 'Classes/Utilities/*.{h,m}'
+    sub.dependency 'GTLCommonIOS/CommonDefine'        
   end
 
 end
